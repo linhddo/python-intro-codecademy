@@ -1,0 +1,25 @@
+
+#find the median value of a list 
+
+#method 1
+def median(lst): 
+    lst = sorted(lst) # sort the list in order 
+    if len(lst) % 2 != 0: # check if list has odd number of elements 
+        return lst [ len(lst) / 2 ]
+    else: 
+        return ( lst [ len(lst) / 2] + lst[len(lst) /2 -1] ) / 2.0 #if list has even number of elements, return average of the middle 2 elements 
+    
+
+#method 2: very involved, but hey it works!
+import math 
+
+def median(lst): 
+    lst = sorted(lst) 
+    median_pos = (len(lst) - 1) / 2.0
+    if type(median_pos) == int: 
+        return lst[median_pos] 
+    else:
+        median = (lst[int(math.ceil(median_pos))] + lst[int(math.floor(median_pos))]) / 2.0
+        return median
+        
+        
