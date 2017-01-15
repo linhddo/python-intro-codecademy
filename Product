@@ -1,0 +1,7 @@
+#function that takes a list of integers as input and returns product of all elements in list 
+
+def product(lst): 
+    result = 1 
+    for item in lst: 
+        result = result * item 
+    return result 
